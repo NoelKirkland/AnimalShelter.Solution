@@ -1,0 +1,19 @@
+@using AnimalShelter.Models;
+@model AnimalShelter.Models.Type;
+
+<h2>Animal type details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
+
+<ul>
+@if (@Model.Animals.Count == 0)
+{
+  <p>No animals found in this type</p>
+}
+
+@foreach (Animal animal in @Model.Animals)
+{
+  <li>Animal name: @animal.Name</li>
+}
+
+<p>@Html.ActionLink("Back to animal types", "Index")</p>

@@ -11,5 +11,14 @@
   <li>@Html.ActionLink($"{animal.Name}", "Details", new { id = animal.AnimalId }) | @animal.Type.Name</li>
 }
 
+@* <form action="Index" method="post">
+  <label for="orderBy">Order by:</label>
+  <select id="orderBy" name="orderBy">
+    <option value="Breed">Breed</option>
+    <option value="Admittance">Admittance</option>
+  </select>
+  <input type="submit" value="Sort By">
+</form> *@
+
 <p>@Html.ActionLink("Add new animal", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
